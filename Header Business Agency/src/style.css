@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;400&display=swap');
+
+body{
+    background-image: url(../img/hero@2x.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 840px;
+}
+
+.container{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 16px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    align-items: center;
+}
+
+header figcaption{
+    display: none;
+}
+
+header figure img{
+    width: 171px;
+}
+
+header figure{
+    padding: 0px;
+    margin: 0px;
+}
+
+header nav ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    gap: 56px;
+}
+
+header nav ul a{
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #424241;
+}
+
+.hero{
+    width: 784px;
+    margin-top: 30px;
+}
+
+.hero h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    color: #424241;
+    line-height: 120px;
+    margin: 0px;
+}
+
+.hero_title h1 span{
+    color: #7EDAD2;
+}
+
+.hero_title p{
+    font-family: "Poppins", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #909090;
+    margin: 0px;
+}
+
+.hero_title a{
+    display: inline-block;
+    background-color: #7EDAD2;
+    font-family: "Poppins", serif;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 30px 0px;
+}
+
+.hero_number{
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    gap: 40px;
+}
+
+.hero_number div{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    color: #424241;
+    line-height: 57.6px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero_number div span{
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #909090;
+    margin: 0px;
+}
+
+.categories{
+    display: flex;
+    gap: 20px;
+    width: 95%;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+
+.categories article{
+    padding: 32px;
+    background-color: white;
+}
+
+.categories article h3{
+    font-family: "Poppins", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    color: #424241;
+    padding: 5px 0px;
+    margin: 0px;
+}
+
+.categories article p{
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #909090;
+    padding: 0px;
+    margin: 0px;
+}
