@@ -1,0 +1,26 @@
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+
+$primary-font: "Plus Jakarta Sans", sans-serif;
+
+//Colors
+$blue: #666ca3;
+$blue-dark: #4851ff;
+$black: #13183f;
+$grey: #83869a;
+$pink: #f74780;
+$pink-light: #ffa7c3;
+$orange: #ff6f48;
+$magenta: #f02aa6;
+
+$gradient-pink-orange: linear-gradient(180deg, $orange 0.04%, $magenta 100%);
+$gradient-pink-blue: linear-gradient(180deg, $blue-dark 0%, $magenta 99.92%);
+$gradient-pink-orange-hover: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+$gradient-pink-blue-hover: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+
+
+

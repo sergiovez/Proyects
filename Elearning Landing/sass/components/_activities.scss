@@ -1,0 +1,74 @@
+.activities {
+  padding-bottom: 80px;
+  &__header {
+    background-image: $gradient-pink-orange;
+    padding: 25px 30px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    @include breakpoint(tablet){
+      margin-bottom: 0px;
+      }
+    @include breakpoint(desktop){
+        padding-top: 50px;
+        }
+  }
+
+  &__item {
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 10px;
+
+    padding: 56px 28px 40px;
+    position: relative;
+    @include breakpoint(tablet){
+      margin-bottom: 0px;
+      }
+    @include breakpoint(desktop){
+        padding-bottom: 10px;
+        }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+    &-icon{
+      width: 56px;
+      height: 56px;
+      display: inline-block;
+      margin-bottom: 20px;
+      position: absolute;
+      top:-24px;
+      left: 28px;
+    }
+    &-title {
+      color: $black;
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    &-description {
+      font-size: 17px;
+      line-height: 26px;
+      font-weight: 500;
+      color: $grey;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    &-cta {
+      padding-top: 10px;
+    }
+  }
+  .container{
+    @include breakpoint(tablet){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 40px 10px;
+    }
+    @include breakpoint(desktop){
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 60px 10px;
+    }
+  }
+}
