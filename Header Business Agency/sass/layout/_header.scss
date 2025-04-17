@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.header-principal{
+    position: relative;
+    z-index: 10;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 68%;
+        width: 32%;
+        height: 100%;
+        background: v.$color-cyan;
+        z-index: 0;
+        pointer-events: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 160px 28px 160px;
+    background-color: v.$color-grey-bg;
+    figure{
+        width: 212px;
+    }
+
+    .nav-principal{
+        ul{
+        list-style: none;
+        display: flex;
+        gap: 56px;
+            li.more{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            a{
+                text-decoration: none;
+                font-family: v.$primary-font;
+                font-weight: 400;
+                font-size: 18px;
+                color: v.$color-blue;
+                z-index: 10;
+            }
+        }
+    }
+    
+    .aside-principal{
+
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 66px;
+        &__iconos{
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            img{
+                width: 32px;
+            }
+        }
+        &__login{
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            
+            .sign_in{
+                font-family: v.$secondary-font;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 40px;
+                color: v.$color-blue;
+                z-index: 10;
+            }
+            .sign_up{
+                z-index: 10;
+            }
+        }
+        }
+}

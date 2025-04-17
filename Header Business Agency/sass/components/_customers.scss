@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as v;
+.customers{
+    &__item{
+        position: absolute;
+        width: 20%;
+        z-index:80;
+        padding: 20px;
+        background-color: rgba(v.$color-white, 0.5);
+        border-radius: 20px;
+        &-icon{
+            width: 32px;
+            height: 21px;
+        }
+        &-text{
+            font-family: v.$primary-font;
+            font-weight: 400;
+            font-size: 17px;
+            color: v.$color-black;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        &-name{
+            font-family: v.$primary-font;
+            font-weight: 700;
+            font-size: 17px;
+            color: v.$color-black;
+        }
+    }
+    .customer_1{
+        top: 40%;
+        left: 78%;
+    }
+    .customer_2{
+        top: 75%;
+        left: 70%;
+    }
+}

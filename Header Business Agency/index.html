@@ -1,88 +1,100 @@
 <!doctype html>
-<html lang="es">
+<html class="no-js" lang="">
 
 <head>
-
-    <!-- Título para el navegador y los buscadores -->
-    <title>CSS_Proyectos_02</title>
-
-    <!-- Descripción de la página para los buscadores -->
-    <meta name="description" content="Header Business Agency">
-
-    <!-- Palabras clave para los buscadores -->
-    <meta name="keywords" content="Business">
-
-    <!-- Autor de la página -->
-    <meta name="author" content="@sergiovez">
-
-    <!-- Favicon de la página -->
-    <link rel="icon" href="favicon_1.ico" type="image/x-icon">
-
-    <!-- Codificación-->
-    <meta charset="UTF-8">
-
-    <!-- Estilo de CSS-->
-    <link rel="stylesheet" href="./src/style.css">
-    
-    <!-- Para que la web sea responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Para algunos navegadores móviles -->
-    <meta name="theme-color" content="#1e7bbf">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Proyectos 1 - Spa & Beauty</title>
+  <meta name="description" content="Primer proyecto de entrega de CSS con una web no responsive de Spa & Beauty">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-    <header>
+    <header class="header-principal">
       <figure>
-        <img src="img/Logo.png" alt="logo" srcset="img/Logo@2x.png 2x">
-        <figcaption>Logotipo de Archesky</figcaption>
+        <a href="index.html"><img src="img/GlowQueen.svg" alt="GlowQueen"></a>
       </figure>
-      <nav>
+      <nav class="nav-principal">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Service</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">How we work</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Facilities</a></li>
+          <li class="more">
+            <a href="">More</a>
+            <img src="img/flecha.svg" alt="">
+          </li>
         </ul>
       </nav>
+      <aside class="aside-principal">
+        <div class="aside-principal__iconos">
+          <img src="img/search.svg" alt="">
+          <img src="img/shopping.svg" alt="">
+        </div>
+        <div class="aside-principal__login">
+          <a href="#" class="sign_in">Sign In</a>
+          <a href="#" class="sign_up button">Sign Up</a>
+        </div>
+      </aside>
     </header>
-    <section class="hero">
-      <div class="hero_title">
-        <h1><span>Smart</span> business with <span>smart</span> people</h1>
-        <p>Grow your business to the next level to improve your <br> business performance to stay competitive</p>
-        <a href="">Let's Discuss</a>
-      </div> 
-      <div class="hero_number">
-        <div>10+ <span>Years Experience</span></div>
-        <div>891 <span>Cases Solved</span></div>
-        <div>263 <span>Businness Partners</span></div>
+    <main>
+      <div class="hero-principal">
+        <div class="hero-principal-texto">     
+          <h1 class="hero-principal-texto__title">Bring back the beauty and glow of your skin</h1>
+          <p class="hero-principal-texto__text">We provide you various treatments from head to toe using the best product, advanced technology, and affordable price</p>
+          <div class="hero-principal-texto__buttons">
+            <a href="#" class="book_now button">Book Now</a>
+            <div class="play">
+              <img src="img/play.png" alt="">
+              <a href="#" class="watch">Watch Video</a>
+            </div>
+          </div>
+        </div> 
+        <div class="hero-principal-imagen">
+          <img src="img/hero.svg" alt="">
+        </div>
       </div>
-    </section>
-    <section class="categories">
-      <article>
-        <img src="img/Business.svg" alt="">
-        <h3>Businness Planning</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      </article>
-      <article>
-        <img src="img/Financial.svg" alt="">
-        <h3>Financial Planning</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      </article>
-      <article>
-        <img src="img/Marketing.svg" alt="">
-        <h3>Digital Marketing</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      </article>
-      <article>
-        <img src="img/Analysis.svg" alt="">
-        <h3>Data Analysis</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      </article>
-    </section>
+      <div class="data-principal">
+        <article class="data-principal__item data-principal__item--treatment">
+          <img class="data-principal__item-icon" src="img/special_treatment.svg" alt="">
+          <div class="data-principal__item-info">
+            <h2 class="data-principal__item-info-number">15+</h2>
+            <p class="data-principal__item-info-text">Special</br>Treatment</p>
+          </div>
+        </article>
+        <article class="data-principal__item data-principal__item--therapist">
+          <img class="data-principal__item-icon" src="img/professional_therapist.svg" alt="">
+          <div class="data-principal__item-info">
+            <h2 class="data-principal__item-info-number">100%</h2>
+            <p class="data-principal__item-info-text">Proffesional</br>Therapist</p>
+          </div>
+        </article>
+        <article class="data-principal__item data-principal__item--herbal">
+          <img class="data-principal__item-icon" src="img/herbal.svg" alt="">
+          <div class="data-principal__item-info">
+            <h2 class="data-principal__item-info-number">100%</h2>
+            <p class="data-principal__item-info-text">Herbal</br>Cream Formula</p>
+          </div>
+        </article>
+      </div>
+      <div class="customers">
+        <article class="customers__item customer_1">
+          <img src="img/commas.svg" alt="" class="customers__item-icon">
+          <p class="customers__item-text">I have a regular schedule to take treatment from GlowQueen, they gave me the best service and treatment ever to maintain the beauty and health of my skin</p>
+          <strong class="customers__item-name">Sophia Princeton</strong>
+        </article>
+        <article class="customers__item customer_2">
+          <img src="img/commas.svg" alt="" class="customers__item-icon">
+          <p class="customers__item-text">For the past few years, I've had a hard time finding the right place for skin care to deal with my complicated skin condition, thank God I found GlowQueen to treat my skin</p>
+          <strong class="customers__item-name">Tamara Jules</strong>
+        </article>
+      </div>
+    </main>
   </div>
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>

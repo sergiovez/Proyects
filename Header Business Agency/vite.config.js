@@ -7,4 +7,5 @@ export default defineConfig({
       usePolling: true, // Recomendado para WSL, permite detectar cambios en archivos
     },
   },
+  base: "./",
 });

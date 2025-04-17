@@ -1,0 +1,12 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+.button {
+    @include m.button();
+  }
+
+.button:hover {
+    background-color: v.$color-grey;
+    color: v.$color-blue;
+    transition: all 1s ease;
+  }
+  
