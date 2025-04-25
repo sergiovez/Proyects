@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+.button_loc {
+    @include m.button(v.$color-black,v.$color-orange);
+    @include m.breakpoint(tablet){
+      margin-left: 39px;
+    }
+    @include m.breakpoint(desktop){
+      margin-left: 156px;
+    }
+  }
+
+  .button {
+    @include m.button(v.$color-black,v.$color-orange);
+  }
+
+  

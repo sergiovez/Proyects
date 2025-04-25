@@ -51,6 +51,7 @@
         display: flex;
         align-items: center;
         gap: 66px;
+        z-index: 10;
         &__iconos{
             display: flex;
             gap: 32px;

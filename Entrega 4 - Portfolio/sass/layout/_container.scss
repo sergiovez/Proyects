@@ -1,0 +1,54 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.container{
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../img/Hero_mobile.svg');
+        width: 174px;
+        height: 383px;
+        top: 0;
+        left: 50%;
+        background-size: auto; // o 'contain' según el efecto que busques
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: translate(-50%, 0);
+        z-index: 5;
+    }
+
+
+        @include m.breakpoint(tablet){
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../img/Hero_tablet.svg');
+                width: 322px;
+                height: 600px;
+                left: auto;
+                transform: none;
+                top: 0;
+                right: 0;
+                background-repeat: no-repeat;
+                z-index: 1;
+            }
+          }
+
+          @include m.breakpoint(desktop){
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../img/Hero_desktop.svg');
+                width: 445px;
+                height: 720px;
+                right: 165px;
+                transform: none;
+                top: 0;
+                background-repeat: no-repeat;
+                z-index: 1;
+            }
+          }
+
+}

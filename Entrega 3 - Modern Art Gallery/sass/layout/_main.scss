@@ -1,0 +1,16 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+main.principal{
+    padding-left: 16px;
+    padding-right: 16px;
+    @include m.breakpoint(tablet){
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      @include m.breakpoint(desktop){
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+}
+

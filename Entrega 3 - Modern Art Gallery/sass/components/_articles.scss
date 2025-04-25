@@ -1,0 +1,142 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.item-day{
+    @include m.breakpoint(tablet){
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 68px;
+        margin-bottom: 11px;
+        padding-top: 120px;
+      }
+      @include m.breakpoint(desktop){
+        padding-top: 318px;
+        padding-left: 165px;
+        padding-right: 165px;
+      }
+        &__picture{
+            width: 100%;
+        }
+
+        & div{
+            @include m.breakpoint(tablet){
+                width: 67%;
+              }
+        }
+
+        &__title{
+            color: v.$color-black;
+            text-transform: uppercase;
+            @include m.heading_style(50px,45px);
+            padding-top: 25px;
+            padding-bottom: 21px;
+            @include m.breakpoint(tablet){
+                padding-top: 36px;
+              }
+            @include m.breakpoint(desktop){
+                @include m.heading_style(60px,60px);
+              }
+        }
+
+        &__text{
+            color: v.$color-grey;
+            width: 90%;
+            padding-bottom: 32px;
+            @include m.body_style(18px,28px);
+            @include m.breakpoint(tablet){
+                padding-bottom: 65px;
+              }
+            @include m.breakpoint(desktop){
+                @include m.body_style(22px,32px);
+                width: 80%;
+              }
+        }
+
+}
+
+.item-inspired{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    align-content: space-between;
+
+    @include m.breakpoint(tablet){
+        display: grid;
+        grid-template-columns: calc(59% - 5.5px) calc(41% - 5.5px);
+        grid-template-rows: 44% 56%;
+        gap: 11px;
+      }
+      @include m.breakpoint(desktop){
+        padding-top: 30px;
+        padding-left: 165px;
+        padding-right: 165px;
+        gap: 30px;
+        grid-template-columns: calc(59% - 15px) calc(41% - 15px);
+      }
+    &__picture{
+        width: 100%;
+
+    }
+
+    & .pic_2{
+        @include m.breakpoint(tablet){
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            img{
+                height: 731px;
+            }
+          }
+          @include m.breakpoint(desktop){
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            img{
+                height: 750px;
+            }
+          }
+    }
+
+    & .pic_3{
+        @include m.breakpoint(tablet){
+            grid-column: 2;
+            grid-row: 1;
+            img{
+                height: 313px;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    &__info{
+        background-color: v.$color-black;
+        padding: 48px 24px 48px 24px;
+        @include m.breakpoint(tablet){
+            grid-column: 2;
+            grid-row: 2;
+            padding: 85px 30px 85px 30px;
+            height: 396px;
+        }
+        &__title{
+            color: v.$color-white;
+            text-transform: uppercase;
+            @include m.heading_style(50px,45px);
+            padding-bottom: 24px;
+            @include m.breakpoint(desktop){
+                @include m.heading_style(60px,60px);
+              }
+        }
+    
+        &__text{
+            color: v.$color-white;
+            @include m.body_style(18px,28px);
+            @include m.breakpoint(tablet){
+                width: 90%;
+            }
+            @include m.breakpoint(desktop){
+                @include m.body_style(22px,32px);
+                width: 100%;
+              }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.footer-principal{
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 39px;
+  padding-bottom: 60px;
+  background-color: v.$color-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  img{
+      width: 129px;
+      @include m.breakpoint(tablet){
+        width: 172px;
+      }
+  }
+
+  &__logos{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25.6px;
+      a{
+        svg{
+            width: 19.7px;
+            transition: all 1s ease;
+            @include m.breakpoint(tablet){
+              width: 24px;
+            }
+        }
+        &:hover svg path{
+          fill: v.$color-green;
+          }
+      }
+
+
+  }
+
+  ::before{
+      content: '';
+      position: absolute;
+      background-color: v.$color-white;
+      height: 1px;
+      top: 0px;
+      left: 16px;
+      right: 16px;
+  }
+
+  @include m.breakpoint(tablet){
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    ::before{
+        content: '';
+        position: absolute;
+        background-color: v.$color-white;
+        height: 1px;
+        top: 0px;
+        left: 30px;
+        right: 30px;
+    }
+  }
+  @include m.breakpoint(desktop){
+    padding-left: 165px;
+    padding-right: 165px;
+    ::before{
+      content: '';
+      position: absolute;
+      background-color: v.$color-white;
+      height: 1px;
+      top: 0px;
+      left: 165px;
+      right: 165px;
+  }
+  }  
+}

@@ -1,0 +1,163 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.aside-principal{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 87px;
+    padding-top: 60px;
+    background-color: v.$color-grey;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../img/Elipse_1.svg');
+        width: 530px;
+        height: 129px;
+        bottom: 0;
+        left: 0;
+        background-size: auto; // o 'contain' según el efecto que busques
+        background-repeat: no-repeat;
+        transform: translateY(-100px) translateX(-50%);
+        z-index: 4;
+    }
+
+    &__data{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        
+
+        &__title{
+            text-align: center;
+            color: v.$color-white;
+            @include m.heading_style_xl(40px, 40px, -1.14px);
+            @include m.breakpoint(tablet){
+                @include m.heading_style_xl(72px, 72px, -2.05px);
+              }
+            @include m.breakpoint(desktop){
+                @include m.heading_style_xl(88px, 88px, -2.5px);
+              }
+        }
+
+        &__text{
+            text-align: center;
+            color: v.$color-light-grey;
+            width: 92%;
+            @include m.body_style(16px,26px);
+            @include m.breakpoint(tablet){
+                width: 82%;
+                @include m.body_style(18px,28px);
+              }
+            @include m.breakpoint(desktop){
+                width: 100%;
+                text-align: left;
+              }
+            
+        }
+        @include m.breakpoint(desktop){
+            align-items: flex-start;
+          }
+    }
+
+    &__form{
+        width: 343px;
+        margin: 0;
+        padding-top: 50px;
+        @include m.breakpoint(tablet){
+            width: 445px;
+          }
+        @include m.breakpoint(desktop){
+            padding-top: 0px;
+          }
+        
+
+        .formulario{
+            margin-bottom: 32px;
+            position: relative;
+        
+            .text{
+                padding-left: 24px;
+                padding-bottom: 16px;
+                @include m.input();
+                @include m.breakpoint(tablet){
+                    @include m.input(445px);
+                  }
+                
+            }
+        
+            .error-text{
+                @include m.body_style(12px, 16px);
+                letter-spacing: -0.17px;
+                color: v.$color-red;
+                display: none;
+                position: absolute;
+                right: 0;
+                bottom: -25px;
+                @include m.breakpoint(tablet){
+                    @include m.body_style(18px,28px);
+                  }
+            }
+        
+            .text:valid ~ .error-text{
+                display: none;
+            }
+        
+            .text:invalid ~ .error-text{
+                display: block;
+            }
+            
+            &__button{
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    @include m.breakpoint(tablet){
+        padding-left: 161px;
+        padding-right: 161px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../img/Elipse_1.svg');
+            width: 530px;
+            height: 129px;
+            bottom: 0;
+            left: 0;
+            background-size: auto; // o 'contain' según el efecto que busques
+            background-repeat: no-repeat;
+            transform: translateY(-25px) translateX(-50%);
+            z-index: 4;
+        }
+      }
+    @include m.breakpoint(desktop){
+        padding-left: 165px;
+        padding-right: 165px;
+        padding-top: 84px;
+        padding-bottom: 92px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 220px;
+        align-items: flex-start;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../img/Elipse_1.svg');
+            width: 530px;
+            height: 129px;
+            bottom: 0;
+            left: 0;
+            background-size: auto; // o 'contain' según el efecto que busques
+            background-repeat: no-repeat;
+            transform: translateY(-50px) translateX(-20%);
+            z-index: 4;
+        }
+      }  
+}

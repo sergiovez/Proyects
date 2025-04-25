@@ -1,0 +1,86 @@
+@use 'variables' as v;
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: v.$bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: v.$bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: v.$bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: v.$bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+/* Mixin de fuentes*/
+@mixin heading_style($size,$line-height: 100%, $font: v.$primary-font, $weight: 900) {
+  font-size: $size;
+  line-height: $line-height;
+  font-family: $font;
+  font-weight: $weight;
+}
+
+@mixin body_style($size,$line-height: 100%, $font: v.$secondary-font, $weight: 300) {
+  font-size: $size;
+  line-height: $line-height;
+  font-family: $font;
+  font-weight: $weight;
+}
+
+/*Mixin de botones*/
+@mixin button($bg-color, $arrow-color, $text-color: v.$color-white) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-color;
+  align-items: stretch;
+  border: none;
+
+  .button-text {
+    @include heading-style(20px);
+    background-color: $bg-color;
+    text-transform: uppercase;
+    letter-spacing: 3.64px;
+    text-decoration: none;
+    padding: 24px 35px 24px 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  .button-arrow{
+    padding: 24px;
+    background-color: $arrow-color;
+    display: flex;
+    align-items: center;
+    img{
+      width: 8px;
+    }
+  }
+
+  &:hover{
+    .button-text {
+      background-color:$arrow-color;
+    }
+    .button-arrow{
+      background-color:$bg-color;
+    }
+  }
+
+  a:visited{
+    color: $text-color;
+  }
+}

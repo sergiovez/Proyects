@@ -1,0 +1,110 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+html {
+    font-family: v.$primary-font;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+ 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    /*&.principal{
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../img/Hero_mobile.svg');
+            width: 100%;
+            height: 240px;
+            top: 0;
+            left: 0;
+            background-size: cover; // o 'contain' según el efecto que busques
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index:-1; // <- para que quede detrás del contenido
+        }
+
+        @include m.breakpoint(tablet){
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../img/Hero_tablet.svg');
+                width: 60%;
+                height: 700px;
+                top: 0;
+                left: 0;
+                background-size: cover; // o 'contain' según el efecto que busques
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index:-1; // <- para que quede detrás del contenido
+            }
+          }
+          @include m.breakpoint(desktop){
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../img/Hero_desktop.svg');
+                width: 70%;
+                height: 800px;
+                top: 0;
+                left: 0;
+                background-size: cover; // o 'contain' según el efecto que busques
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index:-1; // <- para que quede detrás del contenido
+            }
+          }
+    }
+    &.location{
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../img/maps_tablet.png');
+            width: 100%;
+            height: 550px;
+            top: 0;
+            left: 0;
+            background-size: cover; // o 'contain' según el efecto que busques
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index:-1; // <- para que quede detrás del contenido
+        }
+        @include m.breakpoint(tablet){
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../img/maps_tablet.png');
+                width: 100%;
+                height: 660px;
+                top: 0;
+                left: 0;
+                background-size: cover; // o 'contain' según el efecto que busques
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index:-1; // <- para que quede detrás del contenido
+            }
+          }
+        @include m.breakpoint(desktop){
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../img/maps_desktop.png');
+                width: 100%;
+                height: 660px;
+                top: 0;
+                left: 0;
+                background-size: cover; // o 'contain' según el efecto que busques
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index:-1; // <- para que quede detrás del contenido
+            }
+          }
+    }*/
+} 

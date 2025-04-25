@@ -1,0 +1,107 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.header-principal{
+    padding-left: 111px;
+    padding-right: 111px;
+    padding-top: 20px;
+    padding-bottom: 291px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: v.$color-black;
+    position: relative;
+    img{
+        width: 129px;
+        @include m.breakpoint(tablet){
+            width: 172px;
+          }
+    }
+
+    &__logos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25.6px;
+        z-index: 2;
+        a{
+            svg{
+                width: 19.7px;
+                transition: all 1s ease;
+                @include m.breakpoint(tablet){
+                    width: 24px;
+                  }
+            }
+            &:hover svg path{
+              fill: v.$color-green;
+              }
+          }
+          
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../img/Elipse_1.svg');
+        width: 530px;
+        height: 129px;
+        top: 0;
+        left: 0;
+        transform: translateY(95%) translateX(-45%);
+        background-size: auto; // o 'contain' según el efecto que busques
+        background-repeat: no-repeat;
+        z-index: 4;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        background-image: url('../img/Oval.svg');
+        width: 129px;
+        height: 129px;
+        right: 0;
+        bottom: 0;
+        background-size: auto; // o 'contain' según el efecto que busques
+        background-repeat: no-repeat;
+        transform: translateY(0%) translateX(50%);
+        z-index: 4;
+        @include m.breakpoint(tablet){
+            transform: translateY(481px) translateX(50%);
+        }
+        @include m.breakpoint(desktop){
+            transform: translateY(525px) translateX(-550px);
+        }
+        
+
+    }
+
+    @include m.breakpoint(tablet){
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 70px;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../img/Elipse_1.svg');
+            width: 530px;
+            height: 129px;
+            top: 0;
+            left: 0;
+            transform: translateY(70%) translateX(-32%);
+            background-size: auto; // o 'contain' según el efecto que busques
+            background-repeat: no-repeat;
+            z-index: 4;
+            @include m.breakpoint(desktop){
+                transform: translateY(75%);
+            }
+        }
+      }
+      @include m.breakpoint(desktop){
+        padding-left: 165px;
+        padding-right: 194.5px;
+      }
+}

@@ -1,0 +1,102 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.section-software{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+
+    @include m.breakpoint(tablet){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding-top: 52px;
+        padding-bottom: 50px;
+        justify-items: start;
+        row-gap: 52px;
+      }
+      @include m.breakpoint(desktop){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-top: 72px;
+        padding-bottom: 72px;
+        justify-items: start;
+        row-gap: 58px;
+        column-gap: 35px;
+      }
+
+    &__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1px;
+        color: v.$color-white;
+        &__title{
+            @include m.heading_style_l(32px, 40px, -1px);
+            @include m.breakpoint(tablet){
+                @include m.heading_style_l(48px, 56px, -1.5px);
+            }
+        }
+
+        &__text{
+            @include m.body_style(16px, 26px);
+            @include m.breakpoint(tablet){
+                @include m.body_style(18px, 28px);
+            }
+        }
+        @include m.breakpoint(tablet){
+            align-items: start;
+            gap: 14px;
+          }
+    }
+
+    ::before{
+        content: '';
+        position: absolute;
+        background-color: v.$color-white;
+        width: 95%;
+        height: 1px;
+        top: 0px;
+        left: 2.5%;
+    }
+
+    ::after{
+        content: '';
+        position: absolute;
+        background-color: v.$color-white;
+        width: 95%;
+        height: 1px;
+        bottom: 0px;
+        left: 2.5%;
+    }
+    @include m.breakpoint(desktop){
+        padding-left: 165px;
+        padding-right: 165px;
+        ::before{
+            content: '';
+            position: absolute;
+            background-color: v.$color-white;
+            top: 0px;
+            width: calc(100% - 330px);
+            height: 1px;
+            left: 165px;
+        }
+    
+        ::after{
+            content: '';
+            position: absolute;
+            background-color: v.$color-white;
+            width: calc(100% - 330px);
+            height: 1px;
+            bottom: 0px;
+            left: 165px;
+        }
+      }  
+}

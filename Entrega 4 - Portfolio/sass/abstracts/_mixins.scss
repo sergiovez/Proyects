@@ -1,0 +1,113 @@
+@use 'variables' as v;
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: v.$bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: v.$bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: v.$bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: v.$bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+/* Mixin de fuentes*/
+@mixin heading_style_xl($size: 88px,$line-height: 88px, $letter-spacing: -2.5px, $font: v.$primary-font, $weight: 700) {
+  font-size: $size;
+  line-height: $line-height;
+  font-family: $font;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin heading_style_l($size: 48px,$line-height: 56px, $letter-spacing: -1.5px, $font: v.$primary-font, $weight: 700) {
+  font-size: $size;
+  line-height: $line-height;
+  font-family: $font;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin heading_style_m($size: 24px,$line-height: 32px, $font: v.$primary-font, $weight: 700) {
+  font-size: $size;
+  line-height: $line-height;
+  font-family: $font;
+  font-weight: $weight;
+}
+
+@mixin body_style($size: 18px,$line-height: 28px, $font: v.$primary-font, $weight: 500) {
+  font-size: $size;
+  line-height: $line-height;
+  font-family: $font;
+  font-weight: $weight;
+}
+
+/*Mixin de botones*/
+@mixin button($bg-color: v.$color-grey, $line-color: v.$color-green, $text-color: v.$color-white) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-color;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2.29px;
+  cursor: pointer;
+  transition: all 1s ease;
+  position: relative;
+
+  &:hover{
+    color: $line-color;
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    background-color: v.$color-green;
+    width: 100%;
+    height: 2px;
+    top: 36px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    height: 38px;
+    visibility: hidden;
+  }
+}
+
+@mixin input($width: 343px){
+  width: $width;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid v.$color-white;
+  color: v.$color-white;
+  @include body_style(16px, 26px);
+
+  &:focus{
+    border-bottom-color: v.$color-green;
+  }
+
+  &:invalid:focus{
+    border-bottom-color: v.$color-red;
+  }
+
+  @include heading_style_m(16px, 26px);
+}

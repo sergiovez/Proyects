@@ -1,0 +1,159 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.section-proyects{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__title{
+            color: v.$color-white;
+            @include m.heading_style_xl(40px, 40px, -1.14px);
+            @include m.breakpoint(tablet){
+                @include m.heading_style_xl(70px, 70px, -2.05px);
+              }
+        }
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../img/Elipse_1.svg');
+        width: 530px;
+        height: 129px;
+        top: 0;
+        right: 0;
+        background-size: auto; // o 'contain' según el efecto que busques
+        background-position: left top;
+        background-repeat: no-repeat;
+        z-index: 4;
+        transform: scaleX(-1) translateX(-50%) translateY(-64.5px);
+    }
+
+    .articles{
+        @include m.breakpoint(tablet){
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-content: space-between;
+            padding-top: 60px;
+            row-gap: 60px;
+          }
+    }
+
+    &__article{
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        color: v.$color-white;
+        &__picture{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                display: block;
+                @include m.breakpoint(tablet){
+                    width: 342px;
+                  }
+                @include m.breakpoint(desktop){
+                    width: 540px;
+                  }
+            }
+            div{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column; /* Para poner los botones uno debajo del otro */
+                    align-items: center;
+                    justify-content: center;
+                    gap: 48px;
+                    opacity: 0;
+                    z-index: 10;
+                    visibility: hidden;
+                    &:hover{
+                        visibility: visible;
+                    }
+            }
+            &:hover{
+                img{
+                    opacity: 0.25;
+                }
+                div{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__data{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 7px;
+
+            &__title{
+                @include m.heading_style_m(24px,32px, 0px);
+                text-transform: uppercase;
+            }
+
+            &__programs{
+                display: flex;
+                justify-content: stretch;
+                align-items: center;
+                text-transform: uppercase;
+                gap: 18px;
+                @include m.body_style(18px,28px);
+            }
+        }
+
+        &__buttons{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+            @include m.breakpoint(desktop){
+                display: none;
+              }
+        }
+        @include m.breakpoint(tablet){
+            padding-top: 0px;
+          }
+
+    }
+    @include m.breakpoint(tablet){
+        padding-top: 48px;
+        padding-bottom: 100px;
+      }
+    @include m.breakpoint(desktop){
+        padding-left: 165px;
+        padding-right: 165px;
+        padding-bottom: 139px;
+        padding-top: 68px;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../img/Elipse_1.svg');
+            width: 530px;
+            height: 129px;
+            top: 0;
+            right: 0;
+            background-size: auto; // o 'contain' según el efecto que busques
+            background-position: left top;
+            background-repeat: no-repeat;
+            z-index: 4;
+            transform: scaleX(-1) translateX(-27%) translateY(-120%);
+        }
+      }  
+}

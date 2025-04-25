@@ -1,0 +1,107 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.hero_principal{
+    padding-top: 240px;
+    padding-bottom: 120px;
+    @include m.breakpoint(tablet){
+        padding-top: 145px;
+        padding-bottom: 145px;
+        padding-left: 390px;
+      }
+    @include m.breakpoint(desktop){
+        display: flex;
+        justify-content: space-between;
+        gap: 246px;
+        padding-left: 165px;
+        padding-right: 165px;
+        padding-top: 190px;
+      }
+    
+    &__title{
+        padding-top: 32px;
+        text-transform: uppercase;
+        color: v.$color-black;
+        @include m.heading_style(60px,55px);
+        @include m.breakpoint(desktop){
+          @include m.heading_style(96px,88px);
+          color: v.$color-white;
+          width: 200%;
+        }
+    }
+
+    &__text{
+        padding-top: 32px;
+        padding-bottom: 32px;
+        color: v.$color-grey;
+        width: 90%;
+        @include m.body_style(18px,28px);
+        @include m.breakpoint(tablet){
+            width: 100%;
+          }
+        @include m.breakpoint(desktop){
+          @include m.body_style(22px,32px);
+          width: 100%;
+          padding-bottom: 64px;
+          }
+    }
+}
+
+.hero_location{
+    margin-top: 478px;
+    padding: 48px 16px 56px 16px;
+    background-color: v.$color-black;
+    @include m.breakpoint(tablet){
+        margin-top: 528px;
+        display: flex;
+        gap: 68px;
+        padding: 88px 40px 80px 40px;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    @include m.breakpoint(desktop){
+        margin-top: 528px;
+        display: flex;
+        gap: 220px;
+        padding: 104px 165px 128px 165px;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    &__title{
+        text-transform: uppercase;
+        color: v.$color-white;
+        @include m.heading_style(50px,45px);
+        @include m.breakpoint(desktop){
+            padding-top: 0px;
+            @include m.heading_style(70px,70px);
+          }
+    }
+
+    &__subtitle{
+        padding-top: 48px;
+        text-transform: uppercase;
+        color: v.$color-orange;
+        @include m.heading_style(32px,32px);
+        @include m.breakpoint(tablet){
+            padding-top: 0px;
+          }
+        @include m.breakpoint(desktop){
+            padding-top: 0px;
+            @include m.heading_style(36px,36px);
+          }
+    }
+
+    &__text{
+        color: v.$color-white;
+        width: 90%;
+        @include m.body_style(18px,28px);
+        &_1{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        @include m.breakpoint(desktop){
+            @include m.body_style(22px,32px);
+            width: 80%;
+          }
+    }
+}

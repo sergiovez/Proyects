@@ -1,0 +1,106 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.footer{
+    margin-top: 120px;
+    padding: 48px 32px 48px 32px;
+    background-color: v.$color-black;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-content: space-between;
+
+    @include m.breakpoint(tablet){
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 65px;
+      }
+    @include m.breakpoint(desktop){
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 140px;
+        padding: 80px 165px 80px 165px;
+        margin-top: 180px;
+      }  
+    &__modern{
+        img{
+            width: 110px;
+            @include m.breakpoint(desktop){
+                width: 160px;
+              }  
+            }
+        
+    }
+
+    &__text{
+        color: v.$color-white;
+        width: 90%;
+        @include m.body_style(16px,26px);
+        @include m.breakpoint(desktop){
+            @include m.body_style(18px,28px);
+          }
+    }
+
+    &__logos{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        @include m.breakpoint(tablet){
+            padding-left: 90px;
+          }
+    }
+
+}
+
+.footer_loc{
+    padding: 48px 32px 48px 32px;
+    background-color: v.$color-orange;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-content: space-between;
+
+    @include m.breakpoint(tablet){
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 65px;
+      }
+    @include m.breakpoint(desktop){
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 140px;
+        padding: 80px 165px 80px 165px;
+      }
+
+    &__modern{
+        img{
+        width: 110px;
+        filter: invert(1);
+        @include m.breakpoint(desktop){
+            width: 160px;
+          }    
+        }
+    }
+
+    &__text{
+        color: v.$color-black;
+        width: 90%;
+        @include m.body_style(16px,26px);
+        @include m.breakpoint(desktop){
+            @include m.body_style(18px,28px);
+          }
+    }
+
+    &__logos{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        filter: invert(1);
+        @include m.breakpoint(tablet){
+            padding-left: 140px;
+          }
+    }
+
+}
